@@ -42,8 +42,7 @@ app.get('/api/timestamp/:date_string?',(req,res)=>{
   }
   else if(today == 'Invalid Date' && new Date(parseInt(data)) == 'Invalid Date') {
     res.json({
-      unix : null,
-      utc : 'Invalid Date'
+      error : 'Invalid Date'
     })
   }
 
